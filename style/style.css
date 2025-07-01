@@ -1,0 +1,213 @@
+:root {
+  --bk-color: #101111;
+  --b-color: #7A87FB;
+  --y-color: #FFD49C;
+  --w-color: #FFFFFF;
+  --sw-color: #707070;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--w-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bk-color);
+  color: var(--w-color);
+}
+
+.bg-color {
+  background-color: var(--bk-color);
+  color: var(--w-color);
+}
+
+.navigation-bar {
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+}
+
+.navlinks {
+  display: inline-flex;
+  gap: 2rem;
+  padding: .3rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background-image: linear-gradient( #151818), 
+                    linear-gradient(90deg, var(--y-color), var(--b-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.navlinks .nav-item .nav-link {
+  transition: all 0.5s ease-in;
+}
+
+.navlinks .nav-item:hover .nav-link {
+  transform: scale(1.1);
+}
+
+.button-gradient {
+  border: 2px solid transparent;
+  padding: .5rem;
+  border-radius: 50px;
+  background-image: linear-gradient( 90deg, var(--b-color), var(--w-color)), 
+                    linear-gradient(90deg, var(--w-color), var(--b-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.button-border-gradient {
+  padding: .5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background-image: linear-gradient( #151818), 
+                    linear-gradient(90deg, var(--b-color), var(--y-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.grid-background {
+  height: 80vh;
+  border: 2px solid #222;
+  background-color: #0f0f0f;
+  background-image:
+    linear-gradient(transparent 0%, transparent calc(100% - 2px), #222 2px),
+    linear-gradient(90deg, transparent 0%, transparent calc(100% - 2px), #222 2px);
+  background-size: 240px 100px; /* Grid cell size */
+  background-position: 50% 50%; /* Start grid from center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-big {
+    display: inline-block;
+    transform: scale(2); /* Makes the icon 2 times bigger */
+    transform-origin: center;
+}
+
+.inner-grid-div {
+  width: calc(720px - 3px);
+  min-height: calc(300px - 3px);
+  position: relative;
+}
+
+
+
+.star-top {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+.star-bottom {
+  position: absolute;
+  bottom: -15px;
+  left: -215px; 
+}
+
+.home-bottom-div {
+  border-top: 1px solid var(--sw-color);
+  border-bottom: 1px solid var(--sw-color);
+  border-left: none;
+  border-right: none;
+}
+
+.about-left-div h2{
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--w-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left-div div {
+  width: 2px;
+  height: 70%;
+  background-color: var(--w-color);
+}
+
+.project-display-div {
+  width: 400px;
+  height: 400px;
+}
+
+.project-display-div.left {
+  background-image: linear-gradient( 90deg, var(--b-color), var(--y-color));
+}
+
+.project-display-div.right {
+  background-image: linear-gradient( 90deg, var(--y-color), var(--b-color));
+}
+
+.number-of-project {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid transparent;
+  padding: .5rem;
+  border-radius: 50px;
+  background-image: linear-gradient( 180deg, var(--bk-color), var(--sw-color)), 
+                    linear-gradient(180deg, var(--sw-color), var(--bk-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.review-card {
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background-image: linear-gradient( #131414), 
+                    linear-gradient(135deg, var(--y-color), var(--b-color), var(--bk-color), var(--bk-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--sw-color);
+}
+
+.quote {
+  position: relative;
+}
+
+.quote span {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  transform: scale(5);
+  background: linear-gradient(90deg, var(--y-color), var(--b-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+grid-image-div {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
